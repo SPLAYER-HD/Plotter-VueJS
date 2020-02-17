@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  plotter: &plotter
+    build:
+      context: .
+      dockerfile: ./compose/local/Dockerfile
+    image: plotter/diego:v1
+    ports:
+      - "8080:80"
